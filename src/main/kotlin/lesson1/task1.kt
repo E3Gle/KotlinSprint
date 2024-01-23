@@ -1,6 +1,6 @@
 package lesson1
 
-class task1 {
+fun main() {
     var ordersAmount: Int = 0
     val thanksForOrder = "Thank you for your purchase!"
 }
