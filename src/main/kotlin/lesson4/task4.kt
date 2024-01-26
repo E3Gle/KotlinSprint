@@ -2,21 +2,12 @@ package lesson4
 
 fun main() {
     val dayOfTraining = 5
-    val armsAndAbsDay: Boolean
-    val legsAndBackDay: Boolean
-
-    if (dayOfTraining % 2 == 0) {
-        legsAndBackDay = true
-        armsAndAbsDay = false
-    } else {
-        legsAndBackDay = false
-        armsAndAbsDay = true
-    }
+    val isEvenDay = dayOfTraining % 2 == 0
 
     println(
-        "Упражнения для рук: $armsAndAbsDay\n" +
-                "Упражнения для ног: $legsAndBackDay\n" +
-                "Упражнения для спины: $armsAndAbsDay\n" +
-                "Упражнения для пресса: $legsAndBackDay"
+        "Упражнения для рук: ${!isEvenDay}\n" +
+                "Упражнения для ног: ${isEvenDay}\n" +
+                "Упражнения для спины: ${isEvenDay}\n" +
+                "Упражнения для пресса: ${!isEvenDay}"
     )
 }
