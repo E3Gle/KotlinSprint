@@ -1,4 +1,9 @@
 package lesson3
 
-class task5 {
+fun main() {
+    val userMove = "D2-D4;0"
+    val (oldPosition, newPosition, moveNumber) = userMove.split("-", ";")
+    println(oldPosition)
+    println(newPosition)
+    println(moveNumber)
 }
