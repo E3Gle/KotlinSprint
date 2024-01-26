@@ -1,14 +1,13 @@
 package lesson4
 
 fun main() {
-    val isSunny = true
-    val isTentOpen = true
-    val humidity = 20
-    val season = "Winter"
-
-    areConditionsWell(isSunny, isTentOpen, humidity, season)
+    println(
+        "Благоприятные ли условия сейчас для роста бобовых? " +
+                "${IS_SUNNY && IS_TENT_OPEN && HUMIDITY == 20 && SEASON != "Winter"}"
+    )
 }
 
-fun areConditionsWell(isSunny: Boolean, isTentOpen: Boolean, humidity: Int, season: String) {
-    println("Благоприятные ли условия сейчас для роста бобовых? ${isSunny && isTentOpen && humidity == 20 && season != "Winter"}")
-}
+const val IS_SUNNY = true
+const val IS_TENT_OPEN = true
+const val HUMIDITY = 20
+const val SEASON = "Winter"
