@@ -12,6 +12,11 @@ fun main() {
 
     println(
         "Корабль может приступить к долгосрочному плаванию: " +
-                "${(isIntact && crew in 55..70 && provision > 50) || (!isIntact && crew == 70 && isWeatherWell && provision >= 50)}"
+                "${(isIntact && crew in MIN_CREW..NORMAL_CREW && provision > MIN_PROVISION) 
+                        || (!isIntact && crew == NORMAL_CREW && isWeatherWell && provision >= MIN_PROVISION)}"
     )
 }
+
+const val MIN_CREW = 55
+const val NORMAL_CREW = 70
+const val MIN_PROVISION = 50
