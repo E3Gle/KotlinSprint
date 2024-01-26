@@ -1,13 +1,15 @@
 package lesson3
 
 fun main() {
-    val beforeNoonGreeting = "Good day to you, "
-    val afterNoonGreeting = "Good evening to you, "
-    val userName = "Vasya"
+    val isAfternoon = false
+    val userName = "Claire"
+    val greetingMessage: String
 
-    var greetingMessage = "$beforeNoonGreeting$userName"
-    println(greetingMessage)
-
-    greetingMessage = "$afterNoonGreeting$userName"
-    println(greetingMessage)
+    if (isAfternoon) {
+        greetingMessage = "Good day to you, $userName"
+        println(greetingMessage)
+    } else {
+        greetingMessage = "Good evening to you, $userName"
+        println(greetingMessage)
+    }
 }
