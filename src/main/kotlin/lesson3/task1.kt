@@ -1,4 +1,12 @@
 package lesson3
 
-class task1 {
+fun main() {
+    var greeting = "Good day to you, "
+    val userName = "Claire"
+
+    println("$greeting$userName")
+
+    greeting = "Good evening to you, "
+    println("$greeting$userName")
 }
+
