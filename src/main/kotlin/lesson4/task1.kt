@@ -5,7 +5,7 @@ fun main() {
     val bookedTablesForToday = 13
     val bookedTablesForTomorrow = 9
     println(
-        "Доступность столиков на сегодня: ${if (totalOfTables > bookedTablesForToday) "true" else "false"}\n" +
-                "Доступность столиков на завтра: ${if (totalOfTables > bookedTablesForTomorrow) "true" else "false"}"
+        "Доступность столиков на сегодня: ${totalOfTables > bookedTablesForToday}\n" +
+                "Доступность столиков на завтра: ${totalOfTables > bookedTablesForTomorrow}"
     )
 }
