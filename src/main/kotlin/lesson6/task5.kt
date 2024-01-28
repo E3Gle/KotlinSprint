@@ -1,7 +1,5 @@
 package lesson6
 
-import kotlin.random.Random
-
 fun main() {
     println("Для входа в систему необходимо создать учётную запись. Для этого следуйте инструкциям на экране.\nУкажите желаемый логин: ")
     val userLogin = readln()
@@ -15,8 +13,8 @@ fun main() {
     val inputtedPassword = readln()
 
     if (inputtedLogin == userLogin && inputtedPassword == userPassword) {
-        var firstNumber = Random.nextInt(1, 10)
-        var secondNumber = Random.nextInt(1, 10)
+        var firstNumber = (1..9).random()
+        var secondNumber = (1..9).random()
         var attempts = 3
 
         println("Для входа необходимо подтвердить, что вы не робот.\nВведите результат сложения двух чисел: $firstNumber и $secondNumber.\nУ вас три попытки")
@@ -26,15 +24,13 @@ fun main() {
                     println("Добро пожаловать!")
                     break
                 }
-
                 else -> {
-                    firstNumber = Random.nextInt(1, 10)
-                    secondNumber = Random.nextInt(1, 10)
-                    println("Неверно. Введите результат сложения двух чисел: $firstNumber и $secondNumber. У вас осталось ${--attempts}")
+                    firstNumber = (1..9).random()
+                    secondNumber = (1..9).random()
+                    println("Неверно. Введите результат сложения двух чисел: $firstNumber и $secondNumber. У вас осталось ${--attempts} попыток")
                 }
             }
         }
-
     } else {
         println("Данные введены неверно. Введите заново ваши логин и пароль.")
     }
