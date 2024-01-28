@@ -6,9 +6,7 @@ fun main() {
     val result = mutableListOf<String>()
     val userInput = readln().toInt()
 
-    val evenNumbersProgression = 0..userInput step 2
-
-    for (i in evenNumbersProgression) {
+    for (i in 0..userInput step 2) {
         result.add("$i")
     }
     println(result.joinToString(", "))
