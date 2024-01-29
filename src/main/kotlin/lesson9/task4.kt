@@ -1,4 +1,9 @@
 package lesson9
 
-class task4 {
+fun main() {
+    println("Введите 5 ингредиентов блюда через запятую: ")
+    val userInput = readln()
+
+    val usersIngredients = userInput.split(", ")
+    println(usersIngredients.sorted().joinToString(", "))
 }
