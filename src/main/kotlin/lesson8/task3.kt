@@ -5,7 +5,7 @@ fun main() {
     println("Введите название ингредиента, который вы хотите найти: ")
     val userInput = readln()
 
-    if (ingredients.find { it == userInput }?.isNotEmpty() == true)
+    if (userInput in ingredients)
         println("Ингредиент $userInput в рецепте есть")
     else println("Такого ингредиента в рецепте нет")
 }
