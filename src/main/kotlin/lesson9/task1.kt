@@ -1,4 +1,8 @@
 package lesson9
 
-class task1 {
+fun main() {
+    val ingredients = listOf("Ром", "Мука", "Вода", "Масло")
+
+    println("В рецепте есть следующие ингредиенты: ")
+    ingredients.forEach { println(it) }
 }
