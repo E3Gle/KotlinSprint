@@ -7,5 +7,3 @@ fun main() {
     Thread.sleep(userSecondsInput * MILLISECONDS_IN_SECOND)
     println("Прошло $userSecondsInput секунд.")
 }
-
-const val MILLISECONDS_IN_SECOND = 1000L
