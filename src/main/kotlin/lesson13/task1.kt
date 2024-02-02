@@ -1,4 +1,7 @@
 package lesson13
 
-class task1 {
+fun main() {
+
 }
+
+class YellowPages(val name: String, val phoneNumber: Long, val companyName: String?)
