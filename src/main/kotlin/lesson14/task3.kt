@@ -26,31 +26,28 @@ fun main() {
     )
 }
 
-class BlackCircle(override val color: String = "Black", override val radius: Int) : Circle()
-class WhiteCircle(override val color: String = "White", override val radius: Int) : Circle()
-class BlackRectangle(override val color: String = "Black", override val height: Int, override val width: Int) :
-    Rectangle()
+class BlackCircle(color: String = "Black", radius: Int) : Circle(color, radius)
+class WhiteCircle(color: String = "White", radius: Int) : Circle(color, radius)
+class BlackRectangle(color: String = "Black", height: Int, width: Int) :
+    Rectangle(color, height, width)
 
-class WhiteRectangle(override val color: String = "White", override val height: Int, override val width: Int) :
-    Rectangle()
+class WhiteRectangle(color: String = "White", height: Int, width: Int) :
+    Rectangle(color, height, width)
 
-open class Circle : Figure("") {
-    open val radius: Int = 0
+open class Circle(color: String, val radius: Int) : Figure(color) {
     override fun calculateAreaOfTheFigure() = (radius * radius) * PI
 
     override fun calculatePerimeterOfTheFigure() = 2 * PI * radius
 }
 
-open class Rectangle : Figure("") {
+open class Rectangle(color: String, val height: Int, val width: Int) : Figure(color) {
 
-    open val width: Int = 0
-    open val height: Int = 0
     override fun calculateAreaOfTheFigure() = (width * height).toDouble()
 
     override fun calculatePerimeterOfTheFigure() = (2 * (width + height)).toDouble()
 }
 
-abstract class Figure(open val color: String) {
+abstract class Figure(val color: String) {
     abstract fun calculateAreaOfTheFigure(): Double
     abstract fun calculatePerimeterOfTheFigure(): Double
 }
