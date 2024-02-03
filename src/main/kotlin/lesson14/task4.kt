@@ -15,20 +15,20 @@ fun main() {
 }
 
 class Planet(
-    override val name: String,
-    override val isLandable: Boolean,
-    override val hasAtmosphere: Boolean,
+    name: String,
+    isLandable: Boolean,
+    hasAtmosphere: Boolean,
     val listOfSatelllites: List<Satellite>
-) : CelestialBody()
+) : CelestialBody(name, isLandable, hasAtmosphere)
 
 class Satellite(
-    override val name: String,
-    override val isLandable: Boolean,
-    override val hasAtmosphere: Boolean
-) : CelestialBody()
+    name: String,
+    isLandable: Boolean,
+    hasAtmosphere: Boolean
+) : CelestialBody(name, isLandable, hasAtmosphere)
 
 open class CelestialBody(
-    open val name: String = "",
-    open val isLandable: Boolean = false,
-    open val hasAtmosphere: Boolean = false
+    val name: String,
+    val isLandable: Boolean,
+    val hasAtmosphere: Boolean
 )
