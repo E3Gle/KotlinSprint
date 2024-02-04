@@ -8,7 +8,7 @@ fun main() {
     user.printInfo()
 }
 
-class User2(val id: Int, val login: String, var password: String, val email: String, var bio: String = "Bio") {
+class User2(val id: Int, val login: String, var password: String, val email: String, var bio: String = "") {
     fun printInfo() {
         println("id = $id, login = $login, password = $password, email = $email, bio = $bio")
     }
