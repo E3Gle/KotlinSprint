@@ -1,4 +1,15 @@
 package lesson16
 
-class task1 {
+fun main() {
+    val dice = Dice()
+
+    dice.throwDice()
+}
+
+class Dice {
+    private val result = (1..6).random()
+
+    fun throwDice() {
+        println("На кубике выпало $result")
+    }
 }
