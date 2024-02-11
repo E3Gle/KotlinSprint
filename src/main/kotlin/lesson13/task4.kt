@@ -4,9 +4,11 @@ fun main() {
 
     val contacts = mutableListOf<ContactsScheme>()
 
-    addContactToListOfContacts(contacts)
-    addContactToListOfContacts(contacts)
-    addContactToListOfContacts(contacts)
+    var counter = 0
+    do {
+        addContactToListOfContacts(contacts)
+        counter++
+    } while (counter < 3)
 
     contacts.forEach { it.printContactInfo() }
 
@@ -25,8 +27,7 @@ fun addContactToListOfContacts(list: MutableList<ContactsScheme>) {
         userInputCompanyName == "" -> list.add(
             ContactsScheme(
                 userInputName,
-                userInputPhoneNumber,
-                null
+                userInputPhoneNumber
             )
         )
 
@@ -34,7 +35,7 @@ fun addContactToListOfContacts(list: MutableList<ContactsScheme>) {
     }
 }
 
-class ContactsScheme(val name: String, val phoneNumber: Long?, val companyName: String?) {
+class ContactsScheme(val name: String, val phoneNumber: Long?, val companyName: String? = null) {
 
     fun printContactInfo() {
         println("- Имя: $name\n- Номер: $phoneNumber\n- Компания: ${companyName ?: "<не указано>"}")
