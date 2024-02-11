@@ -10,7 +10,7 @@ fun main() {
         PhoneContacts("Sam", 5550005551, "null")
     )
 
-    println(listOfContacts.filter { it.companyName != null && it.companyName != "null" }.map { it.companyName }.distinct())
+    println(listOfContacts.mapNotNull { it.companyName }.distinct())
 }
 
 class PhoneContacts(val name: String, val phoneNumber: Long, val companyName: String?) {
